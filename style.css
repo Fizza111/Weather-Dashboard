@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(244, 235, 235);
+}
+h1{
+    color: white;
+    background-color: rgb(11, 11, 134);
+    text-align: center;
+    padding:15px ;
+    font-size: 1.75rem;
+}
+.icon img{
+    /* mix-blend-mode: color-burn; */
+    max-width: 100px;
+    margin-top: -15px;
+}
+
+.container{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+.weather-input{
+    width: 100vh;
+}
+.weather-input input{
+    width: 100%;
+    height: 46px;
+    outline: none;
+    border: 1px solid rgb(232, 230, 230);
+    border-radius: 4px;
+    font-size: 1.07rem;
+    padding: 0 17px;
+    margin: 10px 0 12px 0;
+}
+.weather-data{
+    width: 100%;
+}
+.weather-input button{
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    background-color: rgb(109, 109, 165);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.2 ease;
+}
+.weather-input .location-btn{
+    background-color: rgb(150, 93, 93);
+    transition: all 0.2 ease;
+}
+button:active{
+    transform: scale(0.96);
+    border: 2px solid black;
+}
+.weather-input .seperator{
+    height: 1px;
+    width: 100%;
+    background-color: #bbb;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-input .seperator::before{
+    content: "Or";
+    color: #696666;
+    padding: 0 15px;
+    font-size: 1.15rem;
+    background: rgb(244, 235, 235);
+    margin-top: -4px;
+}
+.current-weather{
+    background-color: rgb(109, 109, 165);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 20px 70px 20px 20px;
+}
+.current-weather h2{
+    font-size: 1.7rem;
+}
+.weather-data h4{
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* img{
+     mix-blend-mode: color-burn;
+    max-width: 100px; 
+}  */
+.current-weather .icon h4{
+    margin-top: -14px;
+    text-transform: capitalize;
+}
+.days-forecast h2{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.weather-card {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.weather-card .card{
+    list-style: none;
+    color: #fff;
+    padding: 18px 16px;
+    border-radius: 5px;
+    background: #696f74;
+    width: 150px;
+    height: 300px;
+}
+.weather-card .card img{
+    max-width: 70px;
+    margin: 5px 0 -12px 0;
+
+}
+.card h2{
+    font-size: 1rem;
+}
+.card h4{
+    font-size: 0.8rem;
+}
+.icon h4{
+    text-align: center;
+}
+@media(max-width:940px){
+  .container{
+    flex-wrap: wrap;
+  }
+}
+@media(max-width:600px){
+    *{
+        font-size: 0.7rem;
+    }
+    .weather-input h2{
+        font-size: 1rem;
+    }
+    .days-forecast h2{
+        font-size: 1rem;
+    }
+   
+}
+@media(max-width:475px){
+   .icon img{
+    max-width: 70px;
+   }
+   .current-weather h2{
+    font-size: 1rem;
+   }
+   .weather-card .card{
+   
+    width: 100px;
+    height: 250px;
+}
+.weather-card .card h2{
+    font-size: 1rem;
+}
+   
+}
+@media(max-width:390px){
+    .icon img{
+       
+        position: relative;
+        left: 60px;
+    }
+    .icon h4{
+        position: relative;
+        left: 60px;
+    }
+}
